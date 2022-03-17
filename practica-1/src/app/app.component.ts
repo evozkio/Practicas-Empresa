@@ -1,5 +1,4 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import {NgbDate, NgbCalendar, NgbDateParserFormatter} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -15,21 +14,4 @@ export class AppComponent {
   public muestraConsola(variable:any):void{
     console.log(variable);
   }
-@Component({
-  selector: 'ngbd-datepicker-range-popup',
-  templateUrl: './datepicker-range-popup.html',
-  styles: [`
-    .dp-hidden {
-      width: 0;
-      margin: 0;
-      border: none;
-      padding: 0;
-    }
-    .custom-day {
-      text-align: center;
-      padding: 0.185rem 0.25rem;
-      display: inline-block;
-      height: 2rem;
-      width: 2rem;
-    })
 }

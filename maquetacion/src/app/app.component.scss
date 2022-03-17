@@ -1,0 +1,74 @@
+//** DISPLAY FLEX **//
+.contenedor-principal-flex {
+    display: flex;
+    flex-direction: column;
+    .contenedor-cabecera {
+        background-color: yellow;
+        flex: auto;
+    }
+    .contenedor-necesario-para-flex {
+        background-color: blue;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        .contenedor-filtros {
+            background-color: green;
+            flex: 2;
+        }
+        .contenedor-tabla {
+            background-color: blueviolet;
+            flex: 8;
+        }
+    }
+}
+
+//** DISPLAY GRID **//
+.contenedor-principal-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    .contenedor-cabecera {
+        background-color: yellowgreen;
+    }
+    .contenedor-necesario-para-flex {
+        background-color: darkseagreen;
+        display: grid;
+        grid-template-columns: 2fr 8fr;
+        .contenedor-filtros {
+            background-color: lightpink;
+        }
+        .contenedor-tabla {
+            background-color: cadetblue;
+        }
+    }
+}
+
+//** COMUNES **//
+.contenedor-principal {
+    background-color: maroon;
+    height: 100vh;
+    .contenedor-cabecera {
+        height: 50px;
+        max-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        *:first-child {
+            color: cadetblue;
+            font-weight: bold;
+            font-family: monospace!important;
+            font-size: 1.8rem;
+        }
+    }
+    .contenedor-necesario-para-flex {
+        height: 100%;
+        overflow-y: hidden;
+        .contenedor-filtros {
+            height: 100%;
+            overflow-y: auto;
+        }
+        .contenedor-tabla {
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+}
