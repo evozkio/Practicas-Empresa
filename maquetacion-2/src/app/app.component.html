@@ -1,0 +1,33 @@
+<div class="contenedor_Principal">
+    <div class="contenedor_Cabecera">cabecera</div>
+    <div class="contenedor_Buscador">
+        <label for="inputBuscador">Buscador</label>
+        <div class="contenedor_inputBuscador">
+            <input class="form-control text_buscador" type="text" placeholder="Busca..." id="inputBuscador" />
+            <button class="btn btn-light boton_buscador" (click)="buscar()">Buscar</button>
+        </div>
+        <select multiple class="form-control resultado_buscador" id="select_marca_codigo">
+            <option value={{item.referencia}} *ngFor="let item of Productos">{{item.referencia}}</option>
+        </select>
+
+    </div>
+    <div class="contenedor_Datos">
+        <div class="contenedor_Arriba">
+            <img src="{{ProductoMostrar.marca_logo}}" class="img-fluid marca_logo">
+            <h3>{{ProductoMostrar.referencia}} </h3>
+            <h3>{{ProductoMostrar.descripcion}} </h3>
+            <h3>{{ProductoMostrar.sesion}} </h3>
+            <h3>{{ProductoMostrar.familia}} </h3>
+            <h3>{{ProductoMostrar.lote}} </h3>
+            <h3>{{ProductoMostrar.fecha_sincronizacion}} </h3>
+        </div>
+        <div class="contenedor_Abajo">
+
+            <img src="{{ProductoMostrar.imagen_producto}}" class="img-fluid imagen_producto">
+
+        </div>
+    </div>
+    <div class="contenedor_Pie">
+        <p>Pie</p>
+    </div>
+</div>

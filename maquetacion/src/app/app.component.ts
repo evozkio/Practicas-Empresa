@@ -35,6 +35,8 @@ export class AppComponent {
   "cliente": "Paco"
   }]
 
+  
+
 
   cambiaDatos(){
     if(this.bandera){

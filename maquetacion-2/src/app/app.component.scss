@@ -1,0 +1,65 @@
+.contenedor_Principal {
+    height: 100vh;
+    background-color: red;
+    display: grid;
+    grid-template-rows: 40px 1fr 20px;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "cabecera cabecera" "buscador datos" "pie pie";
+    overflow-y: hidden;
+    .contenedor_Cabecera {
+        background-color: blue;
+        grid-area: cabecera;
+    }
+    .contenedor_Buscador {
+        background-color: blueviolet;
+        grid-area: buscador;
+        overflow-y: auto;
+        height: 100%;
+        padding: 5px;
+        .contenedor_inputBuscador {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            .text_buscador {
+                flex: 10;
+            }
+            .boton_buscador {
+                flex: 1;
+            }
+        }
+        .resultado_buscador {
+            margin-top: 10px;
+        }
+    }
+    .contenedor_Datos {
+        background-color: aquamarine;
+        grid-area: datos;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+        .contenedor_Arriba {
+            padding: 10px;
+            background-color: chartreuse;
+            flex: 6;
+            overflow: auto;
+            .marca_logo {
+                height: 25%;
+            }
+        }
+        .contenedor_Abajo {
+            background-color: coral;
+            flex: 4;
+            overflow: auto;
+            padding: 20px;
+            .imagen_producto {
+                height: 90%;
+            }
+        }
+    }
+    .contenedor_Pie {
+        grid-area: pie;
+        background-color: rgb(65, 65, 189);
+        line-height: 17px;
+    }
+}

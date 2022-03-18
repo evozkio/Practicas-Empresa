@@ -2,29 +2,29 @@
 <button class="btn btn-success" (click)="muestraConsola(title)">Ok</button>
 <div id="Buscador">
     <div id="Cliente">
-        <p>Cliente:</p>
-        <input type="text" placeholder="Cliente..." #cliente required />
-        <button (click)="cliente.value='' ">Borrar</button>
+        <label for="inputCliente">Cliente:</label>
+        <input class="form-control" type="text" placeholder="Cliente..." id="inputCliente" #inputCliente required />
+        <button (click)="inputCliente.value='' ">Borrar</button>
     </div>
     <div id="Referencias">
         <p>Referencias:</p>
-        <input type="text" placeholder="Referencias..." #referencias required />
+        <input class="form-control" type="text" placeholder="Referencias..." #referencias required />
         <button (click)="referencias.value='' ">Borrar</button>
     </div>
     <div id="Usuario">
-        <p>Usuario:</p>
-        <input type="text" placeholder="Usuario..." #usuario required>
+        <label>Usuario:</label>
+        <input class="form-control" type="text" placeholder="Usuario..." #usuario required>
         <button (click)="usuario.value='' ">Borrar</button>
     </div>
     <div id="Fecha">
-        <p>Fecha:</p>
+        <label>Fecha:</label>
         <input type="date" class="inputFecha" #date required>
         <button (click)="date.value='' ">Borrar</button>
     </div>
     <div id="Tipo">
-        <p>Tipo:</p>
+        <label>Tipo:</label>
         <select>
-          <option selected></option>
+          <option selected =true disabled="disabled"></option>
           <option>New York </option>
           <option>Bucarest</option>
           <option>Madrid</option>
