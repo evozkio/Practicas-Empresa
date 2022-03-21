@@ -1,0 +1,10 @@
+<div class="contenedor_Buscador">
+    <label for="inputBuscador">Buscador</label>
+    <div class="contenedor_inputBuscador">
+        <input class="form-control text_buscador" type="text" [(ngModel)]="valorBuscador" placeholder="Busca..." id="inputBuscador" />
+        <button class="btn btn-light boton_buscador" (click)="buscar()">Buscar</button>
+    </div>
+    <select multiple class="form-control resultado_buscador" id="select_marca_codigo">
+        <option value={{item.referencia}} *ngFor="let item of Productos">{{item.referencia}}</option>
+    </select>
+</div>

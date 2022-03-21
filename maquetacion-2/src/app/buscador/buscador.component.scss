@@ -1,0 +1,21 @@
+.contenedor_Buscador {
+    background-color: blueviolet;
+    grid-area: buscador;
+    overflow-y: auto;
+    height: 100%;
+    padding: 5px;
+    .contenedor_inputBuscador {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        .text_buscador {
+            flex: 10;
+        }
+        .boton_buscador {
+            flex: 1;
+        }
+    }
+    .resultado_buscador {
+        margin-top: 10px;
+    }
+}
